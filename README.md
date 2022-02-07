@@ -10,7 +10,7 @@ _A list of my commonly used Git commands_
 
 | Command | Description |
 | ------- | ----------- |
-|`git init`| Initialize a local Git repository |
+| `git init`| Initialize a local Git repository |
 | `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
 
 ### Basic Snapshotting
@@ -27,7 +27,7 @@ _A list of my commonly used Git commands_
 
 | Command | Description |
 | ------- | ----------- |
-| ```bash git branch ``` | List branches (the asterisk denotes the current branch) |
+| `git branch` | List branches (the asterisk denotes the current branch) |
 | `git branch -a` | List all branches (local and remote) |
 | `git branch [branch name]` | Create a new branch |
 | `git branch -d [branch name]` | Delete a branch |
