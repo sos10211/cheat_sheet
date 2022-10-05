@@ -12,6 +12,8 @@ _A list of my commonly used Git commands_
 | ------- | ----------- |
 | `git init`| Initialize a local Git repository |
 | `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
+| `git clone --branch <branchname> <remote-repo-url>` | clone from specific brach |
+| `git clone -b <branchname> <remote-repo-url>` |   ''  |
 
 ### Basic Snapshotting
 
@@ -42,6 +44,7 @@ _A list of my commonly used Git commands_
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch |
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
+
 
 ### Sharing & Updating Projects
 
