@@ -75,3 +75,10 @@ _A list of my commonly used Git commands_
 | `cd ~/.ssh ` | Enter to .ssh dir |
 | `ssh-keygen -t rsa -C "your_email@example.com"` | Generate [id_rsa] and [id_rsa.pub] |
 #### copy [id_rsa.pub] content and past it on githud [Account > Setting > SSH Keys] then try to [git push] again
+
+### Configure git bash user
+| Command | Description |
+| ------- | ----------- |
+| `git config --global user.name "your name"` | Set user name |
+| `git config --global user.email "your email"` | Set user email |
+| `git config --global user.password "your password"` | Set user password |
