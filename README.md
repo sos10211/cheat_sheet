@@ -74,4 +74,4 @@ _A list of my commonly used Git commands_
 | ------- | ----------- |
 | `cd ~/.ssh ` | Enter to .ssh dir |
 | `ssh-keygen -t rsa -C "your_email@example.com"` | Generate [id_rsa] and [id_rsa.pub] |
-# copy [id_rsa.pub] content and past it on githud [Account > Setting > SSH Keys] then try to [git push] again
+#### copy [id_rsa.pub] content and past it on githud [Account > Setting > SSH Keys] then try to [git push] again
