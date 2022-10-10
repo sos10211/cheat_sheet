@@ -67,3 +67,11 @@ _A list of my commonly used Git commands_
 | `git log --summary` | View changes (detailed) |
 | `git log --oneline` | View changes (briefly) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
+
+### Configure .ssh key 
+
+| Command | Description |
+| ------- | ----------- |
+| `cd ~/.ssh ` | Enter to .ssh dir |
+| `ssh-keygen -t rsa -C "your_email@example.com"` | Generate [id_rsa] and [id_rsa.pub] |
+# copy [id_rsa.pub] content and past it on githud [Account > Setting > SSH Keys] then try to [git push] again
