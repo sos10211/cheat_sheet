@@ -1,5 +1,5 @@
-# git_cheat_sheet
-git hub cheat sheet for newbies
+# cheat_sheet
+cheat sheet for newbies
 
 Git Commands
 ============
