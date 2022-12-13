@@ -85,11 +85,81 @@ _A list of my commonly used Git commands_
 
 
 
-### Nginx server
+### Nginx server ubuntu
 #### delete apache server
 `systemctl stop apache2`
+`systemctl disable apache2`
+`apt remove apache2`
+#### delete dependemcis
+`apt autoremove`
 
+#### Clean and update server
+`apt clean all && apt update && apt dist-upgrade`
+##### Install nginx
+`apt install nginx`
+##### Installing and configure Firewall
+`apt install ufw`
+`ufw enable`
+`ufw app list`
+`ufw status`
+`ufw allow "Nginx Full"`
+### Server configuration
+#### Create server configuration on `/etc/nginx/sites-available/site_name`
+### exmaples:
+#### Front-end
+`server {
 
+  root /var/www/your_folde/html;
+  index index.html index.htm index.nginx-debian.html;
 
+  server_name domain_name domain_alies;
 
+  location / {
+        # for socket.io web socket
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_http_version 1.1;
+        # for socket
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        try_files $uri.html $uri $uri/ /index.html;
+  }
+}`
+#### Api example
+`server {
+
+  server_name domain_name;
+
+  location / {
+
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+        proxy_pass http://localhost:5050;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+  }
+
+}`
+
+#### link to `/etc/nginx/sites-enabled/*`
+`ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/example`
+
+### create static web page on `/var/www/*`
+### install git and clone your project
+### install node 
+### install pm2 for keep runing node server process
+`npm install -g pm2`
+#### start pm2 instance
+`pm2 start --name demo demo.jss -i max`
+`pm2 startup ubuntu`
+
+## SSL certificates
+`apt install certbot python3-certbot-nginx`
+`certbot --nginx -d your_domain.com -d another_domain.com`
+#### certificate only vaild for ninty days.To set a timer to validate automatically:
+`systemctl status certbot.timer`
 
