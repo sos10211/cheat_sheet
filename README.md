@@ -104,10 +104,15 @@ _A list of my commonly used Git commands_
 `ufw status`
 `ufw allow "Nginx Full"`
 ### Server configuration
+
 #### Create server configuration on `/etc/nginx/sites-available/site_name`
+
 ### exmaples:
+
 #### Front-end
-`server {
+
+```
+server {
 
   root /var/www/your_folde/html;
   index index.html index.htm index.nginx-debian.html;
@@ -125,9 +130,14 @@ _A list of my commonly used Git commands_
         proxy_cache_bypass $http_upgrade;
         try_files $uri.html $uri $uri/ /index.html;
   }
-}`
+}
+
+```
+
 #### Api example
-`server {
+
+```
+server {
 
   server_name domain_name;
 
@@ -143,7 +153,9 @@ _A list of my commonly used Git commands_
         proxy_cache_bypass $http_upgrade;
   }
 
-}`
+}
+
+```
 
 #### link to `/etc/nginx/sites-enabled/*`
 `ln -s /etc/nginx/sites-available/example /etc/nginx/sites-enabled/example`
