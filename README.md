@@ -83,6 +83,10 @@ _A list of my commonly used Git commands_
 | `git config --global user.email "your email"` | Set user email |
 | `git config --global user.password "your password"` | Set user password |
 
+### Give permission to usb in linux
+`sudo usermod -a -G uucp nanashi`
+| -------------------------------- |
+
 
 
 ### Nginx server ubuntu
