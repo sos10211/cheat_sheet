@@ -79,6 +79,7 @@ _A list of my commonly used Git commands_
 ### Configure git bash user
 | Command | Description |
 | ------- | ----------- |
+| `git config --list` | Show global config |
 | `git config --global user.name "your name"` | Set user name |
 | `git config --global user.email "your email"` | Set user email |
 | `git config --global user.password "your password"` | Set user password |
