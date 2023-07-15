@@ -182,4 +182,6 @@ server {
 `systemctl status certbot.timer`
 
 #### Linux command
+| Command | Description |
+| ------------- | ---------------- |
 |`sudo apt remove --autoremove <packagename> -y`| delete and clean linux package |
