@@ -174,9 +174,12 @@ server {
 `pm2 start --name demo demo.jss -i max`
 `pm2 startup ubuntu`
 
+
 ## SSL certificates
 `apt install certbot python3-certbot-nginx`
 `certbot --nginx -d your_domain.com -d another_domain.com`
 #### certificate only vaild for ninty days.To set a timer to validate automatically:
 `systemctl status certbot.timer`
 
+#### Linux command
+|`sudo apt remove --autoremove <packagename> -y`| delete and clean linux package |
