@@ -9,4 +9,4 @@
 
 ### Go external package 
 
-- Search for package (here)[https://pkg.go.dev/] and add it to your code then run `go mod tidy`
+- Search for package [here](https://pkg.go.dev/) and add it to your code then run `go mod tidy`
